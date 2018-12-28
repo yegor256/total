@@ -33,7 +33,9 @@ module Total
     # Get the total in bytes
     def memory
       IO.readlines('/proc/meminfo').each do |t|
-        return t.split("\t")[1].to_i * 1024 if t.start_with?('MemTotal:')
+        if t.start_with?('MemTotal:')
+          return t.split("\t")[1].split(' ')[0].strip.to_i * 1024
+        end
       end
       raise 'Can\'t detect memory size at /proc/meminfo'
     end
