@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/yegor256/total.svg)](https://travis-ci.org/yegor256/total)
 [![Gem Version](https://badge.fury.io/rb/total.svg)](http://badge.fury.io/rb/total)
-[![Maintainability](https://api.codeclimate.com/v1/badges/5528e182bb5e4a2ecc1f/maintainability)](https://codeclimate.com/github/yegor256/total/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/6e08ce63e597f241ccc7/maintainability)](https://codeclimate.com/github/yegor256/total/maintainability)
 [![Yard Docs](http://img.shields.io/badge/yard-docs-blue.svg)](http://rubydoc.info/github/yegor256/total/master/frames)
 
 Total is a Ruby gem to detect the total amount of memory in the system.

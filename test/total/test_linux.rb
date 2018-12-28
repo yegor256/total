@@ -36,4 +36,11 @@ class LinuxTest < Minitest::Test
     assert(!linux.memory.nil?)
     assert(linux.memory > 1024 * 1024)
   end
+
+  def test_crashes_when_cant_detect
+    skip if RUBY_PLATFORM.include?('linux')
+    assert_raises Total::CantDetect do
+      Total::Linux.new.memory
+    end
+  end
 end

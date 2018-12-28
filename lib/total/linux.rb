@@ -32,10 +32,11 @@ module Total
   class Linux
     # Get the total in bytes
     def memory
+      raise CantDetect unless File.exist?('/proc/meminfo')
       IO.readlines('/proc/meminfo').each do |t|
         return t.split(/ +/)[1].to_i * 1024 if t.start_with?('MemTotal:')
       end
-      raise 'Can\'t detect memory size at /proc/meminfo'
+      raise CantDetect, 'Can\'t detect memory size at /proc/meminfo'
     end
   end
 end

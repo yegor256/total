@@ -37,6 +37,9 @@ require_relative 'total/osx'
 # Copyright:: Copyright (c) 2018 Yegor Bugayenko
 # License:: MIT
 module Total
+  # When it's impossible to detect something.
+  class CantDetect < StandardError; end
+
   # Memory specifics.
   class Mem
     # Get it in bytes.
@@ -50,7 +53,7 @@ module Total
     def target
       return Total::OSX.new if RUBY_PLATFORM.include?('darwin')
       return Total::Linux.new if RUBY_PLATFORM.include?('linux')
-      raise "Can\'t detect operating system: #{RUBY_PLATFORM}"
+      raise CantDetect, "Can\'t detect operating system: #{RUBY_PLATFORM}"
     end
   end
 end

@@ -35,7 +35,7 @@ module Total
       `sysctl -a`.split("\n").each do |t|
         return t.split(' ')[1].to_i if t.start_with?('hw.memsize:')
       end
-      raise 'Can\'t detect memory size via sysctl'
+      raise CantDetect, 'Can\'t detect memory size via sysctl'
     end
   end
 end
