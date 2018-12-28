@@ -33,8 +33,8 @@ Gem::Specification.new do |s|
   s.name = 'total'
   s.version = '0.0.0'
   s.license = 'MIT'
-  s.summary = 'Object-oriented logging wrapper'
-  s.description = 'Object-oriented wrapper for Ruby default logging facility'
+  s.summary = 'Total memory calculator in Ruby'
+  s.description = 'Get total memory size of the system'
   s.authors = ['Yegor Bugayenko']
   s.email = 'yegor256@gmail.com'
   s.homepage = 'http://github.com/yegor256/total'
@@ -47,5 +47,4 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rdoc', '4.3.0'
   s.add_development_dependency 'rubocop', '0.60.0'
   s.add_development_dependency 'rubocop-rspec', '1.30.1'
-  s.add_development_dependency 'threads', '0.3.0'
 end
