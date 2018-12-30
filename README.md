@@ -22,6 +22,27 @@ require 'total'
 puts Total::Mem.new.bytes
 ```
 
+The following platforms are supported:
+
+  * MacOSX
+  * Linux
+  * <del>FreeBSD</del> (help needed)
+  * <del>Windows</del> (help needed)
+
+If the platform is not recognized or is not supported, `Total::CantDetect` exception
+will be raised. You should catch it and proceed accordingly, for example:
+
+```ruby
+def total_mb
+  Total::Mem.new.bytes / (1024 * 1024)
+rescue Total::CantDetect
+  512
+end
+```
+
+This code will return the actual memory size in Mb, if it can be detected,
+or 512 otherwise.
+
 That's it.
 
 # How to contribute
