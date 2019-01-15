@@ -22,40 +22,25 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-require_relative 'total/freebsd'
-require_relative 'total/linux'
-require_relative 'total/osx'
+require 'minitest/autorun'
+require_relative '../../lib/total/freebsd'
 
-# Total is a simple class to detect the total amount of memory in the system.
-#
-#  require 'total'
-#  bytes = Total::Mem.new.bytes
-#
-# For more information read
-# {README}[https://github.com/yegor256/total/blob/master/README.md] file.
-#
+# FreeBSD test.
 # Author:: Yegor Bugayenko (yegor256@gmail.com)
 # Copyright:: Copyright (c) 2018 Yegor Bugayenko
 # License:: MIT
-module Total
-  # When it's impossible to detect something.
-  class CantDetect < StandardError; end
+class FreeBSDTest < Minitest::Test
+  def test_fetch_memory_size
+    skip unless RUBY_PLATFORM.include?('freebsd')
+    freebsd = Total::FreeBSD.new
+    assert(!freebsd.memory.nil?)
+    assert(freebsd.memory > 1024 * 1024)
+  end
 
-  # Memory specifics.
-  class Mem
-    # Get it in bytes.
-    def bytes
-      target.memory
-    end
-
-    private
-
-    # Target object to calculate memory size.
-    def target
-      return Total::OSX.new if RUBY_PLATFORM.include?('darwin')
-      return Total::Linux.new if RUBY_PLATFORM.include?('linux')
-      return Total::FreeBSD.new if RUBY_PLATFORM.include?('freebsd')
-      raise CantDetect, "Can\'t detect operating system: #{RUBY_PLATFORM}"
+  def test_crashes_when_cant_detect
+    skip if RUBY_PLATFORM.include?('freebsd')
+    assert_raises Total::CantDetect do
+      Total::FreeBSD.new.memory
     end
   end
 end
