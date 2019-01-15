@@ -26,7 +26,7 @@ The following platforms are supported:
 
   * MacOSX
   * Linux
-  * <del>FreeBSD</del> (help needed)
+  * FreeBSD
   * <del>Windows</del> (help needed)
 
 If the platform is not recognized or is not supported, `Total::CantDetect` exception
