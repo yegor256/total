@@ -22,6 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+require_relative 'total/freebsd'
 require_relative 'total/linux'
 require_relative 'total/freebsd'
 require_relative 'total/osx'
