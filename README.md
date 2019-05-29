@@ -1,6 +1,6 @@
-[![EO principles respected here](http://www.elegantobjects.org/badge.svg)](http://www.elegantobjects.org)
+[![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
 [![DevOps By Rultor.com](http://www.rultor.com/b/yegor256/total)](http://www.rultor.com/p/yegor256/total)
-[![We recommend RubyMine](http://www.elegantobjects.org/rubymine.svg)](https://www.jetbrains.com/ruby/)
+[![We recommend RubyMine](https://www.elegantobjects.org/rubymine.svg)](https://www.jetbrains.com/ruby/)
 
 [![Build Status](https://travis-ci.org/yegor256/total.svg)](https://travis-ci.org/yegor256/total)
 [![Gem Version](https://badge.fury.io/rb/total.svg)](http://badge.fury.io/rb/total)
