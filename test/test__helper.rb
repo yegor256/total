@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# (The MIT License)
-#
 # Copyright (c) 2018-2019 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -16,30 +14,20 @@
 #
 # THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFINGEMENT. IN NO EVENT SHALL THE
 # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# FreeBSD specific.
-#
-# Author:: Yegor Bugayenko (yegor256@gmail.com)
-# Copyright:: Copyright (c) 2018-2019 Yegor Bugayenko
-# License:: MIT
-module Total
-  # FreeBSD specifics.
-  class FreeBSD
-    # Get the total in bytes
-    def memory
-      begin
-        `sysctl -a`.split("\n").each do |t|
-          return t.split(' ')[1].to_i if t.start_with?('hw.physmem:')
-        end
-      rescue Errno::ENOENT => e
-        raise CantDetect, e.message
-      end
-      raise CantDetect, 'Can\'t detect memory size via sysctl'
-    end
-  end
+STDOUT.sync = true
+
+require 'simplecov'
+SimpleCov.start
+if ENV['CI'] == 'true'
+  require 'codecov'
+  SimpleCov.formatter = SimpleCov::Formatter::Codecov
 end
+
+require 'minitest/autorun'
+require_relative '../lib/sibit'
