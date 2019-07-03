@@ -8,5 +8,5 @@ install:
   - bundle install
 script:
   - set -e
-  - rake
+  - bundle exec rake
 
