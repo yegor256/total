@@ -1,6 +1,8 @@
 AllCops:
+  NewCops: enable
   DisplayCopNames: true
   TargetRubyVersion: 2.3
+  SuggestExtensions: false
 
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
@@ -16,5 +18,5 @@ Metrics/PerceivedComplexity:
   Max: 10
 Metrics/ParameterLists:
   Max: 10
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   Enabled: false

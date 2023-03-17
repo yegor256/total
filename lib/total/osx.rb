@@ -2,7 +2,7 @@
 
 # (The MIT License)
 #
-# Copyright (c) 2018-2019 Yegor Bugayenko
+# Copyright (c) 2018-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the 'Software'), to deal
@@ -25,7 +25,7 @@
 # OSX specific.
 #
 # Author:: Yegor Bugayenko (yegor256@gmail.com)
-# Copyright:: Copyright (c) 2018-2019 Yegor Bugayenko
+# Copyright:: Copyright (c) 2018-2023 Yegor Bugayenko
 # License:: MIT
 module Total
   # OSX specifics.
@@ -34,7 +34,7 @@ module Total
     def memory
       begin
         `sysctl -a`.split("\n").each do |t|
-          return t.split(' ')[1].to_i if t.start_with?('hw.memsize:')
+          return t.split[1].to_i if t.start_with?('hw.memsize:')
         end
       rescue Errno::ENOENT => e
         raise CantDetect, e.message

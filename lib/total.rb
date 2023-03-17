@@ -2,7 +2,7 @@
 
 # (The MIT License)
 #
-# Copyright (c) 2018-2019 Yegor Bugayenko
+# Copyright (c) 2018-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the 'Software'), to deal
@@ -35,7 +35,7 @@ require_relative 'total/osx'
 # {README}[https://github.com/yegor256/total/blob/master/README.md] file.
 #
 # Author:: Yegor Bugayenko (yegor256@gmail.com)
-# Copyright:: Copyright (c) 2018-2019 Yegor Bugayenko
+# Copyright:: Copyright (c) 2018-2023 Yegor Bugayenko
 # License:: MIT
 module Total
   # When it's impossible to detect something.
@@ -55,7 +55,7 @@ module Total
       return Total::OSX.new if RUBY_PLATFORM.include?('darwin')
       return Total::Linux.new if RUBY_PLATFORM.include?('linux')
       return Total::FreeBSD.new if RUBY_PLATFORM.include?('freebsd')
-      raise CantDetect, "Can\'t detect operating system: #{RUBY_PLATFORM}"
+      raise CantDetect, "Can't detect operating system: #{RUBY_PLATFORM}"
     end
   end
 end

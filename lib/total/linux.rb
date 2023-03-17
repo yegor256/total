@@ -2,7 +2,7 @@
 
 # (The MIT License)
 #
-# Copyright (c) 2018-2019 Yegor Bugayenko
+# Copyright (c) 2018-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the 'Software'), to deal
@@ -25,7 +25,7 @@
 # Linux specific.
 #
 # Author:: Yegor Bugayenko (yegor256@gmail.com)
-# Copyright:: Copyright (c) 2018-2019 Yegor Bugayenko
+# Copyright:: Copyright (c) 2018-2023 Yegor Bugayenko
 # License:: MIT
 module Total
   # Linux specifics.
@@ -33,7 +33,7 @@ module Total
     # Get the total in bytes
     def memory
       raise CantDetect unless File.exist?('/proc/meminfo')
-      IO.readlines('/proc/meminfo').each do |t|
+      File.readlines('/proc/meminfo').each do |t|
         return t.split(/ +/)[1].to_i * 1024 if t.start_with?('MemTotal:')
       end
       raise CantDetect, 'Can\'t detect memory size at /proc/meminfo'
