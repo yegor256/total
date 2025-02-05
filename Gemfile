@@ -22,3 +22,7 @@
 
 source 'https://rubygems.org'
 gemspec
+
+gem 'rubocop-minitest', '>0', require: false
+gem 'rubocop-performance', '>0', require: false
+gem 'rubocop-rake', '>0', require: false
