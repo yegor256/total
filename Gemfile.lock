@@ -37,7 +37,7 @@ GEM
       rubocop-ast (>= 1.26.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.41.0)
+    rubocop-ast (1.42.0)
       parser (>= 3.3.7.2)
     rubocop-capybara (2.21.0)
       rubocop (~> 1.41)
