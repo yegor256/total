@@ -11,14 +11,14 @@ GEM
       simplecov (>= 0.15, < 0.22)
     date (3.4.1)
     docile (1.4.1)
-    json (2.10.2)
+    json (2.11.3)
     minitest (5.18.0)
-    parallel (1.26.3)
-    parser (3.3.7.3)
+    parallel (1.27.0)
+    parser (3.3.8.0)
       ast (~> 2.4.1)
       racc
     prism (1.4.0)
-    psych (5.2.3)
+    psych (5.2.4)
       date
       stringio
     racc (1.8.1)
@@ -38,7 +38,7 @@ GEM
       rubocop-ast (>= 1.26.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.43.0)
+    rubocop-ast (1.44.1)
       parser (>= 3.3.7.2)
       prism (~> 1.4)
     rubocop-capybara (2.21.0)
@@ -61,7 +61,7 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.13.1)
     simplecov_json_formatter (0.1.4)
-    stringio (3.1.6)
+    stringio (3.1.7)
     unicode-display_width (2.6.0)
 
 PLATFORMS
