@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'minitest', '5.18.0'
   s.add_development_dependency 'rake', '13.0.6'
   s.add_development_dependency 'rdoc', '6.5.0'
-  s.add_development_dependency 'rubocop', '1.48.1'
+  s.add_development_dependency 'rubocop', '1.75.0'
   s.add_development_dependency 'rubocop-rspec', '2.19.0'
   s.metadata['rubygems_mfa_required'] = 'true'
 end
