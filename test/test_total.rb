@@ -13,7 +13,7 @@ require_relative '../lib/total'
 class TotalTest < Minitest::Test
   def test_simple_fetch
     mem = Total::Mem.new
-    assert(!mem.bytes.nil?)
-    assert(mem.bytes > 1024 * 1024)
+    refute_nil(mem.bytes)
+    assert_operator(mem.bytes, :>, 1024 * 1024)
   end
 end
