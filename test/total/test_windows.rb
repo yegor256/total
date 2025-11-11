@@ -28,9 +28,6 @@ class WindowsTest < Minitest::Test
   private
 
   def windows_platform?
-    RUBY_PLATFORM.include?('mingw') ||
-      RUBY_PLATFORM.include?('mswin') ||
-      RUBY_PLATFORM.include?('cygwin') ||
-      RUBY_PLATFORM.include?('ucrt')
+    RUBY_PLATFORM =~ /mingw|mswin|cygwin|ucrt/
   end
 end
