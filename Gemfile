@@ -14,4 +14,4 @@ gem 'rubocop', '~>1.75.0', require: false
 gem 'rubocop-minitest', '~>0.38', require: false
 gem 'rubocop-performance', '~>1.25', require: false
 gem 'rubocop-rake', '~>0.7', require: false
-gem 'rubocop-rspec', '~>2.19.0', require: false
+gem 'rubocop-rspec', '~>2.31.0', require: false
