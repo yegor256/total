@@ -29,10 +29,10 @@ puts Total::Mem.new.bytes
 
 The following platforms are supported:
 
-  * MacOSX
-  * Linux
-  * FreeBSD
-  * Windows (including MSYS2/MinGW, MSVC, and Cygwin environments)
+* MacOSX
+* Linux
+* FreeBSD
+* Windows (including MSYS2/MinGW, MSVC, and Cygwin environments)
 
 If the platform is not recognized or is not supported,
   the `Total::CantDetect` exception is raised.
