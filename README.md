@@ -32,7 +32,7 @@ The following platforms are supported:
 * MacOSX
 * Linux
 * FreeBSD
-* <del>Windows</del> ([help wanted](https://github.com/yegor256/total/issues/3))
+* ~Windows~ ([help wanted](https://github.com/yegor256/total/issues/3))
 
 If the platform is not recognized or is not supported,
   the `Total::CantDetect` exception is raised.
