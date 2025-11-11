@@ -1,3 +1,5 @@
+# Get Total Memory Size
+
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
 [![DevOps By Rultor.com](https://www.rultor.com/b/yegor256/total)](https://www.rultor.com/p/yegor256/total)
 [![We recommend RubyMine](https://www.elegantobjects.org/rubymine.svg)](https://www.jetbrains.com/ruby/)
@@ -10,7 +12,7 @@
 [![Test Coverage](https://img.shields.io/codecov/c/github/yegor256/total.svg)](https://codecov.io/github/yegor256/total?branch=master)
 [![Hits-of-Code](https://hitsofcode.com/github/yegor256/total)](https://hitsofcode.com/view/github/yegor256/total)
 
-Total is a Ruby gem to detect the total amount of memory in the system.
+This Ruby gem helps you detect the total amount of memory in the system.
 
 First, install it:
 
@@ -33,8 +35,8 @@ The following platforms are supported:
 * <del>Windows</del> ([help wanted](https://github.com/yegor256/total/issues/3))
 
 If the platform is not recognized or is not supported,
-the `Total::CantDetect` exception is raised.
-You should catch it and proceed accordingly, for example:
+  the `Total::CantDetect` exception is raised.
+You catch it and proceed accordingly, for example:
 
 ```ruby
 def total_mb
@@ -44,8 +46,8 @@ rescue Total::CantDetect
 end
 ```
 
-This code will return the actual memory size in Mb, if it can be detected,
-or 512 otherwise.
+This code returns the actual memory size in Mb,
+  if it can be detected, or 512 otherwise.
 
 That's it.
 
