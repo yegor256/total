@@ -14,8 +14,8 @@ class FreeBSDTest < Minitest::Test
   def test_fetch_memory_size
     skip unless RUBY_PLATFORM.include?('freebsd')
     freebsd = Total::FreeBSD.new
-    assert(!freebsd.memory.nil?)
-    assert(freebsd.memory > 1024 * 1024)
+    refute_nil(freebsd.memory)
+    assert_operator(freebsd.memory, :>, 1024 * 1024)
   end
 
   def test_crashes_when_cant_detect

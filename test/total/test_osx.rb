@@ -14,8 +14,8 @@ class OSXTest < Minitest::Test
   def test_fetch_memory_size
     skip unless RUBY_PLATFORM.include?('darwin')
     linux = Total::OSX.new
-    assert(!linux.memory.nil?)
-    assert(linux.memory > 1024 * 1024)
+    refute_nil(linux.memory)
+    assert_operator(linux.memory, :>, 1024 * 1024)
   end
 
   def test_crashes_when_cant_detect
