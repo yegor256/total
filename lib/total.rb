@@ -37,7 +37,12 @@ module Total
       return Total::OSX.new if RUBY_PLATFORM.include?('darwin')
       return Total::Linux.new if RUBY_PLATFORM.include?('linux')
       return Total::FreeBSD.new if RUBY_PLATFORM.include?('freebsd')
-      return Total::Windows.new if RUBY_PLATFORM.include?('mingw') || RUBY_PLATFORM.include?('mswin') || RUBY_PLATFORM.include?('cygwin') || RUBY_PLATFORM.include?('ucrt')
+      if RUBY_PLATFORM.include?('mingw') ||
+         RUBY_PLATFORM.include?('mswin') ||
+         RUBY_PLATFORM.include?('cygwin') ||
+         RUBY_PLATFORM.include?('ucrt')
+        return Total::Windows.new
+      end
       raise CantDetect, "Can't detect operating system: #{RUBY_PLATFORM}"
     end
   end

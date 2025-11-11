@@ -14,8 +14,8 @@ class WindowsTest < Minitest::Test
   def test_fetch_memory_size
     skip unless windows_platform?
     windows = Total::Windows.new
-    assert(!windows.memory.nil?)
-    assert(windows.memory > 1024 * 1024)
+    refute_nil(windows.memory)
+    assert_operator(windows.memory, :>, 1024 * 1024)
   end
 
   def test_crashes_when_cant_detect
@@ -28,9 +28,9 @@ class WindowsTest < Minitest::Test
   private
 
   def windows_platform?
-    RUBY_PLATFORM.include?('mingw') || 
-    RUBY_PLATFORM.include?('mswin') || 
-    RUBY_PLATFORM.include?('cygwin') ||
-    RUBY_PLATFORM.include?('ucrt')
+    RUBY_PLATFORM.include?('mingw') ||
+      RUBY_PLATFORM.include?('mswin') ||
+      RUBY_PLATFORM.include?('cygwin') ||
+      RUBY_PLATFORM.include?('ucrt')
   end
 end
