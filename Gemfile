@@ -8,7 +8,7 @@ gemspec
 
 gem 'codecov', '~>0.6.0', require: false
 gem 'minitest', '~>5.18.0', require: false
-gem 'rake', '~>13.0.6', require: false
+gem 'rake', '~>13.3.0', require: false
 gem 'rdoc', '~>6.5.0', require: false
 gem 'rubocop', '~>1.75.0', require: false
 gem 'rubocop-minitest', '~>0.38', require: false
