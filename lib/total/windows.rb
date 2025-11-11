@@ -55,7 +55,7 @@ module Total
         return memory_bytes if memory_bytes.positive?
       end
       nil
-    rescue Errno::ENOENT, StandardError
+    rescue StandardError
       nil
     end
 
@@ -68,7 +68,7 @@ module Total
       memory_bytes = output.to_i
       return memory_bytes if memory_bytes.positive?
       nil
-    rescue Errno::ENOENT, StandardError
+    rescue StandardError
       nil
     end
 
@@ -81,7 +81,7 @@ module Total
         return parse_memory_string(::Regexp.last_match(1).strip)
       end
       nil
-    rescue Errno::ENOENT, StandardError
+    rescue StandardError
       nil
     end
 
