@@ -32,7 +32,7 @@ The following platforms are supported:
 * MacOSX
 * Linux
 * FreeBSD
-* ~Windows~ ([help wanted](https://github.com/yegor256/total/issues/3))
+* Windows (including MSYS2/MinGW, MSVC, and Cygwin environments)
 
 If the platform is not recognized or is not supported,
   the `Total::CantDetect` exception is raised.
