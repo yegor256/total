@@ -1,5 +1,3 @@
-<img src="/logo.svg" width="64px"/>
-
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
 [![DevOps By Rultor.com](https://www.rultor.com/b/yegor256/total)](https://www.rultor.com/p/yegor256/total)
 [![We recommend RubyMine](https://www.elegantobjects.org/rubymine.svg)](https://www.jetbrains.com/ruby/)
@@ -17,7 +15,7 @@ Total is a Ruby gem to detect the total amount of memory in the system.
 First, install it:
 
 ```bash
-$ gem install total
+gem install total
 ```
 
 Then, use it like this:
@@ -29,13 +27,14 @@ puts Total::Mem.new.bytes
 
 The following platforms are supported:
 
-  * MacOSX
-  * Linux
-  * FreeBSD
-  * <del>Windows</del> ([help wanted](https://github.com/yegor256/total/issues/3))
+* MacOSX
+* Linux
+* FreeBSD
+* <del>Windows</del> ([help wanted](https://github.com/yegor256/total/issues/3))
 
-If the platform is not recognized or is not supported, `Total::CantDetect` exception
-will be raised. You should catch it and proceed accordingly, for example:
+If the platform is not recognized or is not supported,
+the `Total::CantDetect` exception is raised.
+You should catch it and proceed accordingly, for example:
 
 ```ruby
 def total_mb
@@ -52,14 +51,16 @@ That's it.
 
 ## How to contribute
 
-Read [these guidelines](https://www.yegor256.com/2014/04/15/github-guidelines.html).
-Make sure your build is green before you contribute
-your pull request. You will need to have [Ruby](https://www.ruby-lang.org/en/) 2.3+ and
+Read these [guidelines].
+Make sure your build is green before you contribute your pull request.
+You need to have [Ruby](https://www.ruby-lang.org/en/) 2.3+ and
 [Bundler](https://bundler.io/) installed. Then:
 
-```
-$ bundle update
-$ bundle exec rake
+```bash
+bundle update
+bundle exec rake
 ```
 
 If it's clean and you don't see any error messages, submit your pull request.
+
+[guidelines]: https://www.yegor256.com/2014/04/15/github-guidelines.html
