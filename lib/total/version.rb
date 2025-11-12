@@ -10,5 +10,5 @@
 # License:: MIT
 module Total
   # Current version of the library.
-  VERSION = '0.0.0'
+  VERSION = '0.4.2'
 end
