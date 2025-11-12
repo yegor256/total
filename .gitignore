@@ -1,10 +1,11 @@
+*.gem
 .bundle/
 .DS_Store
 .idea/
 .yardoc/
-*.gem
 coverage/
 doc/
 node_modules/
+NUL
 rdoc/
 vendor/
