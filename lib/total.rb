@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# SPDX-FileCopyrightText: Copyright (c) 2018-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2018-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 require_relative 'total/linux'
@@ -17,7 +17,7 @@ require_relative 'total/windows'
 # {README}[https://github.com/yegor256/total/blob/master/README.md] file.
 #
 # Author:: Yegor Bugayenko (yegor256@gmail.com)
-# Copyright:: Copyright (c) 2018-2025 Yegor Bugayenko
+# Copyright:: Copyright (c) 2018-2026 Yegor Bugayenko
 # License:: MIT
 module Total
   # When it's impossible to detect something.
