@@ -11,7 +11,7 @@ gem 'minitest-reporters', '~>1.7', require: false
 gem 'mutex_m', '~>0.3', require: false
 gem 'ostruct', '~>0.6', require: false
 gem 'rake', '~>13.0.6', require: false
-gem 'rdoc', '~>7.0.0', require: false
+gem 'rdoc', '~>7.1.0', require: false
 gem 'rubocop', '~>1.82.0', require: false
 gem 'rubocop-minitest', '~>0.38', require: false
 gem 'rubocop-performance', '~>1.25', require: false
