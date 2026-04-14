@@ -10,7 +10,7 @@ gem 'minitest', '~>6.0', require: false
 gem 'minitest-reporters', '~>1.7', require: false
 gem 'mutex_m', '~>0.3', require: false
 gem 'ostruct', '~>0.6', require: false
-gem 'rake', '~>13.0.6', require: false
+gem 'rake', '~>13.4.0', require: false
 gem 'rdoc', '~>7.2.0', require: false
 gem 'rubocop', '~>1.86.0', require: false
 gem 'rubocop-minitest', '~>0.38', require: false
