@@ -20,7 +20,7 @@ class FreeBSDTest < Minitest::Test
 
   def test_crashes_when_cant_detect
     skip if RUBY_PLATFORM.include?('freebsd')
-    assert_raises Total::CantDetect do
+    assert_raises(Total::CantDetect) do
       Total::FreeBSD.new.memory
     end
   end

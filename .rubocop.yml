@@ -22,9 +22,12 @@ Metrics/PerceivedComplexity:
   Max: 10
 Metrics/ParameterLists:
   Max: 10
+Layout/LineLength:
+  Max: 150
 Layout/ParameterAlignment:
   Enabled: false
 plugins:
   - rubocop-rake
   - rubocop-minitest
   - rubocop-performance
+  - rubocop-elegant

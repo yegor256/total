@@ -9,14 +9,9 @@ require 'simplecov'
 require 'simplecov-cobertura'
 unless SimpleCov.running || ENV['PICKS']
   SimpleCov.command_name('test')
-  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
-    [
-      SimpleCov::Formatter::HTMLFormatter,
-      SimpleCov::Formatter::CoberturaFormatter
-    ]
-  )
-  SimpleCov.minimum_coverage 60
-  SimpleCov.minimum_coverage_by_file 50
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([SimpleCov::Formatter::HTMLFormatter, SimpleCov::Formatter::CoberturaFormatter])
+  SimpleCov.minimum_coverage(60)
+  SimpleCov.minimum_coverage_by_file(50)
   SimpleCov.start do
     add_filter 'test/'
     add_filter 'vendor/'
@@ -28,5 +23,5 @@ end
 
 require 'minitest/autorun'
 require 'minitest/reporters'
-Minitest::Reporters.use! [Minitest::Reporters::SpecReporter.new]
-Minitest.load :minitest_reporter
+Minitest::Reporters.use!([Minitest::Reporters::SpecReporter.new])
+Minitest.load(:minitest_reporter)
