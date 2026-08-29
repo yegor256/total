@@ -12,7 +12,7 @@ gem 'mutex_m', '~>0.3', require: false
 gem 'ostruct', '~>0.6', require: false
 gem 'rake', '~>13.4.0', require: false
 gem 'rdoc', '~>8.0.0', require: false
-gem 'rubocop', '~>1.89.0', require: false
+gem 'rubocop', '~>1.90.0', require: false
 gem 'rubocop-elegant', '~>0.5', require: false
 gem 'rubocop-minitest', '~>0.38', require: false
 gem 'rubocop-performance', '~>1.25', require: false
