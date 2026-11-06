@@ -1,8 +1,20 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "automerge": true,
   "extends": [
     "config:base"
   ],
-  "automerge": true,
+  "packageRules": [
+    {
+      "groupName": "coverage gems",
+      "matchManagers": [
+        "bundler"
+      ],
+      "matchPackageNames": [
+        "simplecov",
+        "simplecov-cobertura"
+      ]
+    }
+  ],
   "platformAutomerge": false
 }
